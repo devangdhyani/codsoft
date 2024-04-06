@@ -1,0 +1,25 @@
+\\\\\\\ CALCULATOR\\\\\\\\\\\\\
+print("select operation to perform!!")
+print("1 = Add")
+print("2 = Subtract")
+print("3 = Multiply")
+print("4 = Divide")
+operation = input()
+if operation == "1":   #add ke liye
+    num1 =input("enter 1 value:")
+    num2 =input("enter 2 value:")
+    print("the sum is =" +str(int(num1)+ int(num2)))
+elif operation == "2":                  #subtract k liye
+    num1 =input("enter 1 value:")
+    num2 =input("enter 2 value:")
+    print("the total is =" +str(int(num1)-int(num2)))
+elif operation == "3":                   # multiply k liye 
+    num1 =input("enter 1 value:")
+    num2 =input("enter 2 value:")
+    print("the total is =" + str(int(num1) * int(num2)))
+elif operation == "4":                  # divide ke liye
+    num1 =input("enter 1 value:")
+    num2 =input("enter 2 value:")
+    print("the total is =" + str(int(num1)/ int(num2))) 
+else:
+    print("invalid entry:")      
