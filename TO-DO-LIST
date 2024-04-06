@@ -1,0 +1,44 @@
+def main():
+    tasks = []
+
+    while True:
+        print("\n===== To-Do List =====")
+        print("1= add my tasks")
+        print("2= Show them")
+        print("3= Mark Task as Done")
+        print("4= Exit!!")
+
+        choice = input("Enter your choice?: ")
+//// if u choose 1
+        if choice == '1':
+            print()
+            n_tasks = int(input("How many task wanna Add: "))
+            
+            for i in range(n_tasks):
+                task = input("Enter your task: ")
+                tasks.append({"task": task, "done": False})
+                print("Task added!")
+// if u chooose 2 than it will show task
+        elif choice == '2':
+            print("\nTasks:")
+            for index, task in enumerate(tasks):
+                status = "WELLDONE" if task["done"] else "Not Done"
+                print(f"{index + 1}. {task['task']} - {status}")
+// for 3 it will mark done
+        elif choice == '3':
+            task_index = int(input("Enter your task no. wanna add: ")) - 1
+            if 0 <= task_index < len(tasks):
+                tasks[task_index]["done"] = True
+                print(" Your task marked as done!")
+            else:
+                print("Invalid task number.")
+
+        elif choice == '4':
+            print("Exit To-Do List.")
+            break
+
+        else:
+            print("Invalid choice. try again.")           /// it will show eror
+
+if __name__ == "__main__":
+    main()
